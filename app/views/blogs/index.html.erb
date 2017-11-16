@@ -1,0 +1,6 @@
+<h1>블로그 리스트</h1>
+<% @blogs.each do |b|%>
+<%= link_to("No.#{b.id} | #{b.title}", blog_path(b.id), method: 'get')%><br>
+<%end%>
+
+<%= link_to("글쓰기", new_blog_path)%>
